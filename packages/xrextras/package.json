@@ -5,7 +5,7 @@
   "author": "8th Wall Team",
   "license": "MIT",
   "scripts": {
-    "build": "webpack && cp src/entry.js dist/index.js",
+    "build": "webpack && cp src/entry.js index.js",
     "prepack": "npm run clean && npm run build",
     "dev": "webpack server --devtool eval --mode development",
     "clean": "rm -rf dist"
@@ -28,9 +28,9 @@
     "almost there",
     "webxr"
   ],
-  "main": "dist/index.js",
+  "main": "index.js",
   "files": [
-    "dist/index.js",
+    "index.js",
     "dist/xrextras.js",
     "dist/resources",
     "dist/LICENSE",
