@@ -1,9 +1,15 @@
+import field from '../../resources/envmap/field.jpg'
+import hill from '../../resources/envmap/hill.jpg'
+import city from '../../resources/envmap/city.jpg'
+import pastel from '../../resources/envmap/pastel.png'
+import space from '../../resources/envmap/space.jpg'
+
 const defaultMaps = {
-  field: './external/landing-page/resources/envmap/field.jpg',
-  hill: './external/landing-page/resources/envmap/hill.jpg',
-  city: './external/landing-page/resources/envmap/city.jpg',
-  pastel: './external/landing-page/resources/envmap/pastel.png',
-  space: './external/landing-page/resources/envmap/space.jpg',
+  field,
+  hill,
+  city,
+  pastel,
+  space,
 }
 
 export {

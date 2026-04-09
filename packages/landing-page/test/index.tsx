@@ -2,8 +2,6 @@ import {applyInferredParameters} from '../src/inferred-parameters'
 import {defaultParameters, normalizeParameters} from '../src/parameters'
 import {show} from '../src/render'
 
-import '../../xrextras/src/fonts/fonts.css'
-import '../src/styles.scss'
 import {getTestParameters} from '../src/test-parameters'
 
 const refresh = () => {

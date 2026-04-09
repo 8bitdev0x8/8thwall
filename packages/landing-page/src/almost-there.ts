@@ -1,8 +1,6 @@
 import type {RunConfig} from './xr'
 import html from '../../xrextras/src/almosttheremodule/almost-there-module.html'
-
-import '../../xrextras/src/fonts/fonts.css'
-import '../../xrextras/src/almosttheremodule/almost-there-module.css'
+import safariIcon from '../../xrextras/src/almosttheremodule/safari-fallback.png'
 
 declare const XR8: any
 
@@ -45,7 +43,7 @@ const showAlmostThere = (runConfig: RunConfig, url: string): boolean => {
       img.src = headerImgSrc
     } else {
       img.classList.add('foreground-image')
-      img.src = './external/xrextras-shared-resources/img/almostthere/v2/safari-fallback.png'
+      img.src = safariIcon
     }
   })
 

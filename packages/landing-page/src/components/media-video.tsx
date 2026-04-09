@@ -7,9 +7,9 @@ import {useElementSize} from '../hooks/element-size'
 
 import type {MediaControlMode} from '../parameters'
 
-const PLAY_SRC = './external/landing-page/resources/img/mediarecorder/play-v1.svg'
-const SOUND_ON_SRC = './external/xrextras-shared-resources/img/mediarecorder/sound-on-v1.svg'
-const SOUND_OFF_SRC = './external/xrextras-shared-resources/img/mediarecorder/sound-off-v1.svg'
+import PLAY_SRC from '../../resources/play.svg'
+import SOUND_ON_SRC from '../../resources/sound-on.svg'
+import SOUND_OFF_SRC from '../../resources/sound-off.svg'
 
 interface IMediaVideo {
   src: string

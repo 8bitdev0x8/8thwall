@@ -4,6 +4,8 @@ import {View} from './components/view'
 import type {LandingParameters} from './parameters'
 
 import './styles.scss'
+import '../../xrextras/src/fonts/fonts.css'
+import '../../xrextras/src/almosttheremodule/almost-there-module.css'
 
 let root: HTMLDivElement
 

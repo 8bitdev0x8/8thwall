@@ -10,7 +10,7 @@ module.exports = {
     'landing-page': './src/index.ts',
   },
   output: {
-    filename: 'external/landing-page/[name].js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
   },
   resolve: {
@@ -18,6 +18,28 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.(png|svg|jpg|jpeg|gif|ico|woff|ttf|min\.js)$/,
+        exclude: /node_modules/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'resources/[name]-[hash][ext]',
+        },
+      },
+      {
+        test: /\.s?css$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader',
+        ],
+      },
+      {
+        test: /\.html$/,
+        use: {
+          loader: 'html-loader',
+        },
+      },
       {
         test: /\.(j|t)sx?$/,
         exclude: [/node_modules/],
@@ -46,21 +68,6 @@ module.exports = {
           },
         ],
       },
-      {
-        test: /\.s?css$/,
-        use: [
-          'style-loader',
-          {loader: 'css-loader', options: {url: false}},
-          'sass-loader',
-        ],
-      },
-      {
-        test: /\.html$/,
-        use: {
-          loader: 'html-loader',
-          options: {sources: false},
-        },
-      },
     ],
   },
   performance: {
@@ -73,10 +80,8 @@ module.exports = {
     : [
       new CopyPlugin({
         patterns: [
-          {from: 'resources', to: 'external/landing-page/resources'},
-          {from: '../xrextras/xrextras-shared-resources', to: 'external/xrextras-shared-resources'},
           {from: 'test/index.html', to: 'index.html'},
-          {from: 'LICENSE', to: 'external/landing-page/'},
+          {from: 'LICENSE', to: '.'},
         ],
       }),
     ],
