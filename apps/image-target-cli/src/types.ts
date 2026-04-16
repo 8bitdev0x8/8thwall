@@ -11,12 +11,10 @@ type ReferencedResources = {
   geometryImage?: string
 }
 
-type ImageTargetData = {
+type ImageTargetData = CropResult & {
   imagePath: string
   metadata: null
   name: string
-  type: 'PLANAR' | 'CYLINDER' | 'CONICAL'
-  properties: CropGeometry | CylinderCropGeometry | ConicalCropGeometry
   resources: ReferencedResources
   created: number
   updated: number
@@ -49,15 +47,15 @@ type ConicalCropGeometry = CylinderCropGeometry & {
 
  type PlanarCropResult = {
    type: 'PLANAR'
-   geometry: CropGeometry
+   properties: CropGeometry
  }
  type CylinderCropResult = {
    type: 'CYLINDER'
-   geometry: CylinderCropGeometry
+   properties: CylinderCropGeometry
  }
  type ConicalCropResult = {
    type: 'CONICAL'
-   geometry: ConicalCropGeometry
+   properties: ConicalCropGeometry
  }
 
  type CropResult =
